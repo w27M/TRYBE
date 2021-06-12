@@ -7,10 +7,6 @@ import api from '../services/api';
 const CheckoutBody = () => {
   const history = useHistory();
   const token = localStorage.getItem('token');
-  // console.log(token);
-
-  // ainda está mockado no Beer.js
-  // const cart = JSON.parse(localStorage.getItem('cart'));
 
   const [cart, setCart] = useState(
     JSON.parse(localStorage.getItem('cart')) || [],
@@ -18,16 +14,6 @@ const CheckoutBody = () => {
   const [street, setStreet] = useState('');
   const [houseNumber, setHouseNumber] = useState('');
   const [saleFinished, setSaleFinished] = useState(false);
-
-  // cart mockado
-  // const cart = [
-  //   { nome: 'cerva1', preco: 10.0, quantidade: 3 },
-  //   { nome: 'cerva2', preco: 5.0, quantidade: 6 },
-  // ];
-
-  // saida: userId, totalPrice, deliveryAddress, deliveryNumber, status
-
-  // console.log(`CheckoutBody cart: ${typeof cart}`);
 
   const priceTotalReduced = cart.reduce(
     (curr, next) => curr + next.total,
@@ -53,9 +39,6 @@ const CheckoutBody = () => {
     setCart([]);
     setTimeout(() => history.push('/products'), time);
   };
-
-  // requisição do ?post
-  // const { userId, totalPrice, deliveryAddress, deliveryNumber, status } = req.body;
 
   return (
     <div className="checkout-component-container">

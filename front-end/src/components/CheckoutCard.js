@@ -11,7 +11,6 @@ const CheckoutCard = ({ cartItem, index, cart, setCart }) => {
   return (
     <div
       key={ cartItem.nome }
-      // data-testid={  }
       className="product-item-list"
     >
       <h3 data-testid={ `${index}-product-name` }>{cartItem.nome}</h3>

@@ -8,8 +8,6 @@ function useRedirect() {
   const { user } = useContext(context);
   const history = useHistory();
 
-  console.log(getEvent); // essa linha só pro slint não me encher o saco
-
   useEffect(() => {
     if (user === 'admin') {
       history.push('/admin/orders');

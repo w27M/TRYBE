@@ -94,8 +94,6 @@
   text-decoration: none;
 }
 
-/* Aside contente */
-
 .aside-logo {
   align-items: center;
   background-color: rgba(218, 178, 11, 1);
@@ -105,8 +103,6 @@
   min-height: 266px;
   min-width: 300px;
 }
-
-/* Footer content */
 
 .footer-web {
     align-items: center;
